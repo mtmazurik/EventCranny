@@ -24,7 +24,7 @@ namespace CCA.Services.EventCranny
         private ILogger<Program> _logger;
         private IConfigurationRoot _configuration { get; }
 
-        public Startup(Microsoft.AspNetCore.Hosting.IHostingEnvironment env)       // ctor
+        public Startup(Microsoft.AspNetCore.Hosting.IHostingEnvironment env)       //  ctor
         {
             var builder = new ConfigurationBuilder()        
                 .SetBasePath(env.ContentRootPath)
