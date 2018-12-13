@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  cca.services.EventCranny:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8901:80"
+
+networks:
+  default:
+    external:
+      name: nat
