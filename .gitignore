@@ -34,3 +34,5 @@
 /CCA.Services.LogNook.Tests/obj/CCA.Services.LogNook.Tests.csproj.nuget.cache
 /CCA.Services.LogNook.Tests/obj
 /CCA.Services.LogNook/bin/Debug/netcoreapp2.1
+/CCA.Services.EventCranny/bin/Debug/netcoreapp2.2
+/CCA.Services.EventCranny/obj

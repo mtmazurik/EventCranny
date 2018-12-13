@@ -21,7 +21,7 @@ namespace CCA.Services.EventCranny
 {
     public class Startup
     {
-        private ILogger<Program> _logger;
+        //private ILogger<Program> _logger;
         private IConfigurationRoot _configuration { get; }
 
         public Startup(Microsoft.AspNetCore.Hosting.IHostingEnvironment env)       //  ctor
@@ -35,7 +35,7 @@ namespace CCA.Services.EventCranny
         }
         private void OnShutdown() // callback, applicationLifetime.ApplicationStopping triggers it
         {
-           _logger.Log(LogLevel.Information, "EventCranny service stopped.");
+           //_logger.Log(LogLevel.Information, "EventCranny service stopped.");
         }
 
         public void ConfigureServices(IServiceCollection services)    // Add services to the ASPNETCore App. This gets called by the runtime. 
@@ -97,13 +97,13 @@ namespace CCA.Services.EventCranny
             services.AddTransient<IEventCrannyService, EventCrannyService>();
            
             // logger setup
-            CustomLoggerDBContext.ConnectionString = _configuration.GetConnectionString("LoggerDatabase");
+            //CustomLoggerDBContext.ConnectionString = _configuration.GetConnectionString("LoggerDatabase");
         }
-       public void ConfigureLogging( ILoggingBuilder logging)
-       {
-            logging.ClearProviders();
-            logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
-       }
+       //public void ConfigureLogging( ILoggingBuilder logging)
+       //{
+       //     logging.ClearProviders();
+       //     logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+       //}
         // Use this method to configure the HTTP request pipeline. This method gets called by the runtime. 
         public void Configure(IApplicationBuilder app, IApplicationLifetime applicationLifetime, Microsoft.AspNetCore.Hosting.IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
@@ -130,8 +130,8 @@ namespace CCA.Services.EventCranny
 
             app.UseMvc();
 
-            _logger = loggerFactory.CreateLogger<Program>();
-            _logger.Log(LogLevel.Information, "EventCranny service started.");
+            //_logger = loggerFactory.CreateLogger<Program>();
+            //_logger.Log(LogLevel.Information, "EventCranny service started.");
 
             applicationLifetime.ApplicationStopping.Register( OnShutdown );
         }
