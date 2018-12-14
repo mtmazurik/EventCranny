@@ -107,9 +107,9 @@ namespace CCA.Services.EventCranny
         // Use this method to configure the HTTP request pipeline. This method gets called by the runtime. 
         public void Configure(IApplicationBuilder app, IApplicationLifetime applicationLifetime, Microsoft.AspNetCore.Hosting.IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole(_configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
-            loggerFactory.AddContext(LogLevel.Information, _configuration.GetConnectionString("LoggerDatabase"));
+            //loggerFactory.AddConsole(_configuration.GetSection("Logging"));
+            //loggerFactory.AddDebug();
+            //loggerFactory.AddContext(LogLevel.Information, _configuration.GetConnectionString("LoggerDatabase"));
 
             if (env.IsDevelopment())
             {

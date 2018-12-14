@@ -21,6 +21,7 @@ namespace CCA.Services.EventCranny.Controllers
         //{
         //    _logger = logger;
         //}
+
         [HttpPut("kill")]   // PUT in killed state : container ASPNETCore is shut down completely -> no more logging via its host container
         [Authorize]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Response))]

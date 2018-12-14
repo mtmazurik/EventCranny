@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <AssemblyName>eca.services.lognook</AssemblyName>
+    <AssemblyName>eca.services.eventcranny</AssemblyName>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <Version>0.1.0</Version>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>

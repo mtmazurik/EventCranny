@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CCA.Services.EventCranny.Exceptions;
 
 namespace CCA.Services.EventCranny.Service
 {
@@ -17,6 +18,11 @@ namespace CCA.Services.EventCranny.Service
         {
             _applicationLifetime.StopApplication();
             return "EventCranny service stopped.";
+        }
+
+        public string Send(object JsonObject)
+        {
+            throw new NYIException();
         }
     }
 }

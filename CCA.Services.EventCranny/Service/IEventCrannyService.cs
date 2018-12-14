@@ -9,5 +9,6 @@ namespace CCA.Services.EventCranny.Service
     public interface IEventCrannyService
     {
         string kill();
+        string Send(object JsonObject);
     }
 }
