@@ -1,3 +1,3 @@
 readme.md
 
-EventCranny - pass-thru events to RabbitMQ, not-durable (no storage)
+EventCranny - event service (written in golang) leverages hosted RabbitMQ (CloudAMQP), for event messaging, not-durable (destructive read, either single or multiple listeners)
