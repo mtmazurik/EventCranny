@@ -1,8 +1,0 @@
-version: '3.4'
-
-services:
-  cca.services.EventCranny:
-    image: eventcranny
-    build:
-      context: .
-      dockerfile: CCA.Services.EventCranny\Dockerfile
