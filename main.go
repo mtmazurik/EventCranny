@@ -67,23 +67,4 @@ func CreatePerson(w http.ResponseWriter, r *http.Request) {
 			ContentType: "text/plain", // MIME content type https://www.freeformatter.com/mime-types-list.html
 			Body:        body,
 		})
-
-	// goroutine asynch?
-	// go func(con *amqp.Connection) {
-	// 	timer := time.NewTicker(1 * time.Second)
-	// 	channel, _ := connection.Channel()
-
-	// 	for t := range timer.C {
-	// 		msg := amqp.Publishing{
-	// 			DeliveryMode: 1,
-	// 			Timestamp:    t,
-	// 			ContentType:  "text/plain",
-	// 			Body:         []byte("Hello world"),
-	// 		}
-	// 		mandatory, immediate := false, false
-	// 		channel.Publish("amq.topic", "ping", mandatory, immediate, msg)
-	// 	}
-	//}(connection)
-
-	// select {}
 }
