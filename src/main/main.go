@@ -26,6 +26,7 @@ type Person struct {
 	State     string `json:"state,omitempty"`
 }
 
+// CreatePerson is the REST API action routine, todo: should it be made async (yes, likely)
 func CreatePerson(w http.ResponseWriter, r *http.Request) {
 	//params := mux.Vars(r)
 	var person Person

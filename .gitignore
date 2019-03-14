@@ -1,0 +1,9 @@
+# ignore pkg for now
+/pkg
+/bin
+# don't ignore our main source directory
+!/src
+/src/*
+!/src/main
+# ignore .vscode
+.vscode
