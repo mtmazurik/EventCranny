@@ -5,5 +5,4 @@
 !/src
 /src/*
 !/src/main
-# ignore .vscode
-.vscode
+
