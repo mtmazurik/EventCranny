@@ -10,7 +10,7 @@ import (
 	"github.com/streadway/amqp"
 )
 
-// simple event cranny service - wraps cloudAMQP.com hosted RabbitMQ
+// simple event cranny service - wraps cloudAMQP.com  hosted RabbitMQ
 func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/person", CreatePerson).Methods("POST")
